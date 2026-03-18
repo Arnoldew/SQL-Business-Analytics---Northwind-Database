@@ -228,7 +228,7 @@ Proyek ini menganalisis data bisnis dari **Northwind Database** — sebuah datas
 ## 📸 Query Results
 
 ### 📊 Revenue Per Tahun
-![Revenue Per Tahun](results/02_revenue_per_year.png)
+![Revenue Per Tahun](results/02_revenue_per_tahun.png)
 
 ### 🏆 Top 10 Produk Berdasarkan Revenue
 ![Top 10 Produk](results/03_top10_products.png)
