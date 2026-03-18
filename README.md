@@ -228,22 +228,23 @@ Proyek ini menganalisis data bisnis dari **Northwind Database** — sebuah datas
 ## 📸 Query Results
 
 ### 📊 Revenue Per Tahun
-![Revenue Per Tahun](results/02_revenue_per_tahun.png)
+![Revenue Per Tahun](results/revenue_per_tahun.png)
 
 ### 🏆 Top 10 Produk Berdasarkan Revenue
-![Top 10 Produk](results/03_top10_products.png)
+![Top 10 Produk](results/top_10_produk_terlaris_berdasarkan_revenue.png)
 
 ### 🌍 Revenue Berdasarkan Negara
-![Revenue by Country](results/05_revenue_by_country.png)
+![Revenue by Country](results/distribusi_customer_per_negara.png)
 
 ### 👥 Top 10 Customer
-![Top 10 Customer](results/04_top10_customers.png)
+![Top 10 Customer](results/top_10_customer_berdasarkan_total_belanja.png)
 
 ### 📦 Revenue Per Kategori Produk
-![Revenue by Category](results/06_revenue_by_category.png)
+![Revenue by Category](results/revenue_per_kategori_produk.png)
 
 ### 👔 Performa Karyawan
-![Employee Performance](results/08_employee_performance.png)
+![Employee Performance](results/revenue_per_karyawan.png)
+
 
 ---
 
