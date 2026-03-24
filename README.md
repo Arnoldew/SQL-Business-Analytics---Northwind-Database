@@ -1,62 +1,61 @@
-# SQL-Business-Analytics---Northwind-Database
-SQL Business Analytics using PostgreSQL — Northwind Database analysis covering sales, customers, products &amp; employee performance
+# SQL Business Analytics — Northwind Database
 
-# 📊 SQL Business Analytics — Northwind Database
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Business%20Analytics-orange?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+Analyzing a fictional food distribution company using pure SQL on PostgreSQL. The analysis covers 5 areas: sales performance, customer behavior, product & category breakdown, employee performance, and inventory status.
 
 ---
 
-## 📌 Project Overview
+## Dataset
 
-Proyek ini menganalisis data bisnis dari **Northwind Database** — sebuah dataset simulasi perusahaan distribusi makanan dan minuman — menggunakan SQL murni di atas PostgreSQL. Analisis mencakup 5 area utama: eksplorasi data, performa penjualan, perilaku pelanggan, analisis produk & kategori, dan performa karyawan.
+**Source:** Northwind Database — a classic sample dataset simulating a food and beverage distribution company.
 
-**Tujuan project:** Menjawab pertanyaan bisnis nyata menggunakan SQL querying, mulai dari query dasar hingga multi-table JOIN dan agregasi kompleks.
-
----
-
-## 🎯 Business Questions
-
-| # | Pertanyaan Bisnis |
-|---|-------------------|
-| 1 | Bagaimana tren revenue dari tahun ke tahun? |
-| 2 | Bulan apa yang secara konsisten menghasilkan penjualan tertinggi? |
-| 3 | Produk dan kategori apa yang menghasilkan revenue terbesar? |
-| 4 | Siapa pelanggan paling bernilai (high-value customers)? |
-| 5 | Negara mana yang menjadi pasar utama perusahaan? |
-| 6 | Karyawan mana yang memiliki performa terbaik berdasarkan revenue? |
-| 7 | Produk mana yang membutuhkan restock segera? |
+| Table | Records |
+|-------|---------|
+| Customers | 91 customers |
+| Orders | 830 transactions |
+| Products | 77 products |
+| Data period | July 4, 1996 – May 6, 1998 |
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
-| Tool | Kegunaan |
-|------|----------|
+| Tool | Purpose |
+|------|---------|
 | **PostgreSQL 17** | Database engine |
 | **DBeaver Community** | SQL query editor & GUI |
 | **Git & GitHub** | Version control |
 
 ---
 
-## 📁 Project Structure
+## Business Questions
 
+| # | Question |
+|---|----------|
+| 1 | What is the year-over-year revenue trend? |
+| 2 | Which months consistently produce the highest sales? |
+| 3 | Which products and categories generate the most revenue? |
+| 4 | Who are the highest-value customers? |
+| 5 | Which countries are the main markets? |
+| 6 | Which employees have the best performance by revenue? |
+| 7 | Which products need restocking immediately? |
+
+---
+
+## Project Structure
 ```
-04-sql-business-analytics/
+SQL-Business-Analytics---Northwind-Database/
 │
-├── 📁 dataset/
+├── dataset/
 │   └── northwind.sql               # Raw database dump
 │
-├── 📁 queries/
-│   ├── 01_basic_exploration.sql    # Eksplorasi struktur data
-│   ├── 02_sales_performance.sql    # Analisis tren penjualan
-│   ├── 03_customer_analysis.sql    # Analisis perilaku pelanggan
-│   ├── 04_product_category.sql     # Analisis produk & kategori
-│   └── 05_employee_performance.sql # Analisis performa karyawan
+├── queries/
+│   ├── 01_basic_exploration.sql    # Data structure exploration
+│   ├── 02_sales_performance.sql    # Sales trend analysis
+│   ├── 03_customer_analysis.sql    # Customer behavior analysis
+│   ├── 04_product_category.sql     # Product & category analysis
+│   └── 05_employee_performance.sql # Employee performance analysis
 │
-├── 📁 results/
+├── results/
 │   ├── 01_data_overview.png
 │   ├── 02_revenue_per_year.png
 │   ├── 03_top10_products.png
@@ -71,35 +70,36 @@ Proyek ini menganalisis data bisnis dari **Northwind Database** — sebuah datas
 
 ---
 
-## 📊 Dataset Overview
+## Key Findings
 
-| Tabel | Jumlah Record |
-|-------|--------------|
-| Customers | 91 pelanggan |
-| Orders | 830 transaksi |
-| Products | 77 produk |
-| Periode Data | 4 Juli 1996 – 6 Mei 1998 |
+### 1. Annual Revenue Trend
+
+| Year | Revenue | Note |
+|------|---------|------|
+| 1996 | $208,083.97 | July–December only |
+| 1997 | $617,085.20 | Full year — strongest year, +197% vs 1996 |
+| 1998 | $440,623.87 | January–May only (data cut off) |
+
+**Total revenue across all periods: $1,265,793.04.** If 1998 data ran a full year, the annualized trend suggests it would have exceeded 1997.
 
 ---
 
-## 🔍 Key Findings
+### 2. Best Sales Months
 
-### 1. 📈 Tren Revenue Tahunan
-- **Total revenue keseluruhan: $1,265,793.04** (periode Juli 1996 – Mei 1998)
-- Revenue **1996**: $208,083.97 (hanya mencakup Juli–Desember)
-- Revenue **1997**: $617,085.20 — tahun terkuat, tumbuh **~197%** dibanding 1996
-- Revenue **1998**: $440,623.87 (hanya mencakup Januari–Mei, data terpotong)
-- Jika diannualisasi, tren 1998 berpotensi melampaui 1997
+| Rank | Period | Revenue | Orders |
+|------|--------|---------|--------|
+| 1 | April 1998 | $123,798.68 | 74 |
+| 2 | March 1998 | $104,854.16 | — |
+| 3 | February 1998 | $99,415.29 | — |
 
-### 2. 📅 Bulan Penjualan Terbaik
-- **April 1998** menjadi bulan dengan revenue tertinggi: **$123,798.68** dari 74 orders
-- **Maret 1998** ($104,854.16) dan **Februari 1998** ($99,415.29) melengkapi top 3
-- Tren menunjukkan volume bisnis yang terus tumbuh dari waktu ke waktu
+The top 3 months are all from early 1998 — consistent with the upward growth trajectory from 1997 onward.
 
-### 3. 🏆 Top 10 Produk Terlaris
+---
 
-| Rank | Produk | Qty Terjual | Revenue |
-|------|--------|------------|---------|
+### 3. Top 10 Products by Revenue
+
+| Rank | Product | Qty Sold | Revenue |
+|------|---------|----------|---------|
 | 1 | Côte de Blaye | 623 | $141,396.74 |
 | 2 | Thüringer Rostbratwurst | 746 | $80,368.67 |
 | 3 | Raclette Courdavault | 1,496 | $71,155.70 |
@@ -111,29 +111,28 @@ Proyek ini menganalisis data bisnis dari **Northwind Database** — sebuah datas
 | 9 | Carnarvon Tigers | 539 | $29,171.87 |
 | 10 | Rössle Sauerkraut | 640 | $25,696.64 |
 
-- **Côte de Blaye** unggul jauh meski bukan yang terbanyak secara kuantitas — indikasi harga premium tinggi
-- **Raclette Courdavault** (1,496 qty) dan **Camembert Pierrot** (1,577 qty) adalah produk volume tinggi dengan harga menengah
+Côte de Blaye leads in revenue despite not being the highest-volume product — a clear indicator of premium pricing. Raclette Courdavault and Camembert Pierrot are the volume leaders at mid-range price points.
 
-### 4. 🌍 Pasar Berdasarkan Negara
+---
 
-| Rank | Negara | Customers | Orders | Revenue |
-|------|--------|-----------|--------|---------|
+### 4. Revenue by Country
+
+| Rank | Country | Customers | Orders | Revenue |
+|------|---------|-----------|--------|---------|
 | 1 | USA | 13 | 122 | $245,584.61 |
 | 2 | Germany | 11 | 122 | $230,284.63 |
 | 3 | Austria | 2 | 40 | $128,003.84 |
 | 4 | Brazil | 9 | 83 | $106,925.78 |
 | 5 | France | 10 | 77 | $81,358.32 |
-| 6 | UK | 7 | 56 | $58,971.31 |
-| 7 | Venezuela | 4 | 46 | $56,810.63 |
-| 8 | Sweden | 2 | 37 | $54,495.14 |
 
-- Total **21 negara** aktif sebagai pasar
-- **Austria** sangat menonjol: hanya 2 customers namun menghasilkan $128,003 — keduanya adalah akun bernilai sangat tinggi yang wajib dipertahankan
+Austria is the outlier: only 2 customers but $128K in revenue — both are extremely high-value accounts that carry significant churn risk.
 
-### 5. 👥 Top 10 Customer
+---
 
-| Rank | Customer | Negara | Orders | Total Spent |
-|------|----------|--------|--------|-------------|
+### 5. Top 10 Customers
+
+| Rank | Customer | Country | Orders | Total Spent |
+|------|---------|---------|--------|-------------|
 | 1 | QUICK-Stop | Germany | 28 | $110,277.31 |
 | 2 | Ernst Handel | Austria | 30 | $104,874.98 |
 | 3 | Save-a-lot Markets | USA | 31 | $104,361.95 |
@@ -145,13 +144,14 @@ Proyek ini menganalisis data bisnis dari **Northwind Database** — sebuah datas
 | 9 | Mère Paillarde | Canada | 13 | $28,872.19 |
 | 10 | White Clover Markets | USA | 14 | $27,363.60 |
 
-- **Average Order Value** tertinggi dimiliki **QUICK-Stop: $1,282.29** per transaksi
-- **Save-a-lot Markets** memiliki order terbanyak (31) dengan spending yang hampir setara Ernst Handel
+QUICK-Stop has the highest average order value at **$1,282.29 per transaction**.
 
-### 6. 📦 Analisis Kategori Produk
+---
 
-| Rank | Kategori | Jumlah Produk | Qty Terjual | Revenue |
-|------|----------|--------------|------------|---------|
+### 6. Revenue by Product Category
+
+| Rank | Category | Products | Qty Sold | Revenue |
+|------|---------|---------|----------|---------|
 | 1 | Beverages | 12 | 9,532 | $267,868.18 |
 | 2 | Dairy Products | 10 | 9,149 | $234,507.28 |
 | 3 | Confections | 13 | 7,906 | $167,357.23 |
@@ -161,13 +161,14 @@ Proyek ini menganalisis data bisnis dari **Northwind Database** — sebuah datas
 | 7 | Produce | 5 | 2,990 | $99,984.58 |
 | 8 | Grains/Cereals | 7 | 4,562 | $95,744.59 |
 
-- **Beverages** mendominasi di semua metrik: volume penjualan tertinggi (9,532 unit) sekaligus revenue tertinggi ($267,868)
-- **Meat/Poultry** menarik: hanya 6 produk tapi revenue ke-4 terbesar — rata-rata harga per item sangat tinggi
+Beverages and Dairy Products together account for ~40% of total revenue. Meat/Poultry is worth noting — only 6 products but 4th highest revenue, meaning high unit price.
 
-### 7. 👔 Performa Karyawan
+---
 
-| Rank | Karyawan | Jabatan | Orders | Revenue |
-|------|----------|---------|--------|---------|
+### 7. Employee Performance
+
+| Rank | Employee | Title | Orders | Revenue |
+|------|---------|-------|--------|---------|
 | 1 | Margaret Peacock | Sales Representative | 156 | $232,890.85 |
 | 2 | Janet Leverling | Sales Representative | 127 | $202,812.84 |
 | 3 | Nancy Davolio | Sales Representative | 123 | $192,107.60 |
@@ -178,95 +179,90 @@ Proyek ini menganalisis data bisnis dari **Northwind Database** — sebuah datas
 | 8 | Michael Suyama | Sales Representative | 67 | $73,913.13 |
 | 9 | Steven Buchanan | Sales Manager | 42 | $68,792.28 |
 
-- **Margaret Peacock** adalah top performer: orders terbanyak (156) sekaligus revenue tertinggi ($232,890.85)
-- **Andrew Fuller** (VP Sales) menghasilkan $166,537 dari 96 orders — menangani akun-akun bernilai besar
-
-### 8. 🚚 Efisiensi Pengiriman
-
-| Rank | Karyawan | Avg Hari Pengiriman |
-|------|----------|---------------------|
-| 1 | Steven Buchanan | 7.0 hari ⚡ |
-| 2 | Nancy Davolio | 7.8 hari |
-| 3 | Andrew Fuller | 8.1 hari |
-| 4 | Robert King | 8.4 hari |
-| 5 | Janet Leverling | 8.4 hari |
-| 6 | Laura Callahan | 8.7 hari |
-| 7 | Margaret Peacock | 8.8 hari |
-| 8 | Michael Suyama | 9.1 hari |
-| 9 | Anne Dodsworth | 10.9 hari 🐢 |
-
-- **Steven Buchanan** tercepat dalam pengiriman (7 hari) meski revenue-nya paling rendah — spesialisasi di kecepatan bukan volume
-- **Anne Dodsworth**: pengiriman terlama (10.9 hari) sekaligus revenue terendah kedua — perlu perhatian manajemen
-
-### 9. ⚠️ Produk Perlu Restock Segera
-- Ditemukan **18 produk** yang stoknya berada di bawah reorder level
-- Produk paling kritis:
-
-| Produk | Stok | Reorder Level | Status |
-|--------|------|--------------|--------|
-| Gorgonzola Telino | **0** | 20 | 🚨 Habis total! |
-| Sir Rodney's Scones | 3 | 5 | ⚠️ Kritis |
-| Longlife Tofu | 4 | 5 | ⚠️ Kritis |
-| Louisiana Hot Spiced Okra | 4 | 20 | 🚨 Sangat kritis |
-| Rogede sild | 5 | 15 | ⚠️ Kritis |
+Margaret Peacock leads on both order count (156) and revenue ($232,890).
 
 ---
 
-## 💡 Business Recommendations
+### 8. Delivery Efficiency
 
-| # | Rekomendasi | Prioritas |
-|---|-------------|-----------|
-| 1 | **Restock segera Gorgonzola Telino** (stok 0!) dan 17 produk lain di bawah reorder level | 🚨 Urgent |
-| 2 | **Pertahankan akun Austria** (Ernst Handel) — 2 pelanggan senilai $128K, sangat berisiko jika churn | 🔴 High |
-| 3 | **Investasi ekspansi di Germany** — jumlah orders setara USA namun customer lebih sedikit, artinya tiap customer lebih bernilai | 🔴 High |
-| 4 | **Perkuat lini Beverages & Dairy** — dua kategori ini menyumbang $502K (~40% total revenue) | 🟡 Medium |
-| 5 | **Replikasi strategi Margaret Peacock** — jadikan pendekatan top performer sebagai standar tim sales | 🟡 Medium |
-| 6 | **Evaluasi & coaching Anne Dodsworth** — pengiriman terlama + revenue terendah kedua perlu intervensi | 🟡 Medium |
+| Rank | Employee | Avg. Delivery Days |
+|------|---------|-------------------|
+| 1 | Steven Buchanan | 7.0 days |
+| 2 | Nancy Davolio | 7.8 days |
+| 3 | Andrew Fuller | 8.1 days |
+| 9 | Anne Dodsworth | 10.9 days |
+
+Anne Dodsworth has the slowest delivery time and the second-lowest revenue — two flags worth looking at together.
 
 ---
 
-## 📸 Query Results
+### 9. Products Needing Immediate Restock
 
-### 📊 Revenue Per Tahun
-![Revenue Per Tahun](results/revenue_per_tahun.png)
+18 products are below their reorder level. Most critical:
 
-### 🏆 Top 10 Produk Berdasarkan Revenue
-![Top 10 Produk](results/top_10_produk_terlaris_berdasarkan_revenue.png)
+| Product | Stock | Reorder Level | Status |
+|---------|-------|---------------|--------|
+| Gorgonzola Telino | 0 | 20 | Out of stock |
+| Louisiana Hot Spiced Okra | 4 | 20 | Critical |
+| Sir Rodney's Scones | 3 | 5 | Critical |
+| Longlife Tofu | 4 | 5 | Critical |
+| Rogede sild | 5 | 15 | Critical |
 
-### 🌍 Revenue Berdasarkan Negara
+---
+
+## Business Recommendations
+
+| Priority | Recommendation |
+|----------|---------------|
+| Urgent | Restock Gorgonzola Telino immediately (stock = 0) and the 17 other products below reorder level |
+| High | Protect Austria accounts (Ernst Handel) — 2 customers worth $128K is a concentration risk |
+| High | Expand in Germany — same order count as USA but fewer customers, meaning higher per-customer value |
+| Medium | Double down on Beverages & Dairy — two categories driving ~40% of total revenue |
+| Medium | Investigate Anne Dodsworth — slowest delivery and near-lowest revenue needs attention |
+
+---
+
+## How to Run
+
+1. Install PostgreSQL (version 16 or 17)
+2. Create a new database named `northwind`
+3. Import the dataset:
+```sql
+-- In DBeaver or psql, run:
+\i dataset/northwind.sql
+```
+4. Run the query files in order from `01` to `05` inside the `queries/` folder
+
+---
+
+## Query Results
+
+### Revenue Per Year
+![Revenue Per Year](results/revenue_per_tahun.png)
+
+### Top 10 Products by Revenue
+![Top 10 Products](results/top_10_produk_terlaris_berdasarkan_revenue.png)
+
+### Revenue by Country
 ![Revenue by Country](results/distribusi_customer_per_negara.png)
 
-### 👥 Top 10 Customer
-![Top 10 Customer](results/top_10_customer_berdasarkan_total_belanja.png)
+### Top 10 Customers
+![Top 10 Customers](results/top_10_customer_berdasarkan_total_belanja.png)
 
-### 📦 Revenue Per Kategori Produk
+### Revenue by Category
 ![Revenue by Category](results/revenue_per_kategori_produk.png)
 
-### 👔 Performa Karyawan
+### Employee Performance
 ![Employee Performance](results/revenue_per_karyawan.png)
 
+---
+
+## Author
+
+**Arnoldew Ray Ruby**
+- GitHub: [@Arnoldew](https://github.com/Arnoldew)
+- LinkedIn: [arnoldew-ray-ruby](https://www.linkedin.com/in/arnoldew-ray-ruby/)
 
 ---
 
-## 🚀 How to Run This Project
-
-1. **Install PostgreSQL** (versi 16 atau 17)
-2. **Buat database baru** bernama `northwind`
-3. **Import dataset:**
-   ```sql
-   -- Di DBeaver atau psql, jalankan file:
-   \i dataset/northwind.sql
-   ```
-4. **Jalankan query** di folder `queries/` secara berurutan dari `01` hingga `05`
-
----
-
-## 👤 Author
-
-**[Nama Kamu]**
-- GitHub: [@username](https://github.com/Arnoldew)
-- LinkedIn: [linkedin.com/in/username](https://www.linkedin.com/in/arnoldew-ray-ruby/))
-
----
-
-*Project ini merupakan bagian dari seri 10 Portfolio Project Data Analyst.*
+*Part of a 10-project data analyst portfolio.*
