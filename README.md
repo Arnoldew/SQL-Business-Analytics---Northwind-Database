@@ -238,22 +238,22 @@ Anne Dodsworth has the slowest delivery time and the second-lowest revenue — t
 ## Query Results
 
 ### Revenue Per Year
-![Revenue Per Year](results/revenue_per_tahun.png)
+![Revenue Per Year](result/revenue_per_tahun.png)
 
 ### Top 10 Products by Revenue
-![Top 10 Products](results/top_10_produk_terlaris_berdasarkan_revenue.png)
+![Top 10 Products](result/top_10_produk_terlaris_berdasarkan_revenue.png)
 
 ### Revenue by Country
-![Revenue by Country](results/distribusi_customer_per_negara.png)
+![Revenue by Country](result/distribusi_customer_per_negara.png)
 
 ### Top 10 Customers
-![Top 10 Customers](results/top_10_customer_berdasarkan_total_belanja.png)
+![Top 10 Customers](result/top_10_customer_berdasarkan_total_belanja.png)
 
 ### Revenue by Category
-![Revenue by Category](results/revenue_per_kategori_produk.png)
+![Revenue by Category](result/revenue_per_kategori_produk.png)
 
 ### Employee Performance
-![Employee Performance](results/revenue_per_karyawan.png)
+![Employee Performance](result/revenue_per_karyawan.png)
 
 ---
 
